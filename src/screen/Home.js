@@ -1,24 +1,25 @@
 import React from "react";
 import Sidebar from "../components/Sidebar";
+import DonutChart from "../components/DonutChart";
 
 const Home = () => {
   return (
-    <div className="h-screen flex flex-row">
+    <div className="h-screen flex flex-row font-roboto">
       <Sidebar />
       <div className="p-5 border-r-2 flex-1">
         <div className="flex flex-row items-center justify-between">
           <h4 className="text-lg font-bold">Dashboard</h4>
-          <div className="flex flex-row items-center p-1 bg-gray-200 rounded-full ">
+          <div className="flex flex-row items-center p-1 bg-gray-200 rounded-full">
             <input
               type="text"
               placeholder="Search properties, tasks, etc."
-              className="outline-none rounded-full w-56 text-sm bg-gray-200 p-1 "
+              className="outline-none rounded-full w-56 text-sm bg-gray-200 p-1"
               aria-label="Search"
             />
             <img
               src="search.png"
               alt="Search"
-              className="w-6 h-6 ml-2 cursor-pointer "
+              className="w-6 h-6 ml-2 cursor-pointer"
             />
           </div>
         </div>
@@ -42,36 +43,177 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="w-full border mt-4 p-2 rounded-lg">
-          <div>
+        <div className="w-full border mt-4 p-3 rounded-lg h-56">
+          <div className="flex flex-row items-center justify-between">
             <div>
-                <h4 className="font-bold text-lg">Accounting</h4>
-                <p className="text-gray-500 text-sm">March 1 2020<span></span>April 31 2021</p>
-                <div className="mt-4">
-                  <p className="text-xs text-gray-500">AVG MONTHLY Income</p>
-                  <p className="font-bold text-2xl">$5,849.56</p>
-                </div>
+              <h4 className="font-bold text-lg">Accounting</h4>
+              <p className="text-gray-500 text-sm">
+                March 1 2020<span></span>April 31 2021
+              </p>
+              <div className="mt-4">
+                <p className="text-xs text-gray-500">AVG MONTHLY Income</p>
+                <p className="font-bold text-2xl">$5,849.56</p>
+              </div>
             </div>
-            <div>
+            <div className="p-2 flex flex-row mt-4 items-end">
+              <div className="mx-2 flex flex-col items-center">
+                <div className="bg-teal-600 bg-opacity-20 rounded-t-full w-6 h-10"></div>
+                <p className="text-xs text-center mt-1">Nov</p>
+              </div>
+              <div className="mx-2 flex flex-col items-center">
+                <div className="bg-teal-600 bg-opacity-20 rounded-t-full w-6 h-12"></div>
+                <p className="text-xs text-center mt-1">Dec</p>
+              </div>
+              <div className="mx-2 flex flex-col items-center">
+                <div className="bg-teal-600 bg-opacity-20 rounded-t-full w-6 h-14"></div>
+                <p className="text-xs text-center mt-1">Jan</p>
+              </div>
+              <div className="mx-2 flex flex-col items-center">
+                <div className="bg-teal-600 bg-opacity-20 rounded-t-full w-6 h-16"></div>
+                <p className="text-xs text-center mt-1">Feb</p>
+              </div>
+              <div className="mx-2 flex flex-col items-center">
+                <div className="bg-teal-500 rounded-t-full w-6 h-20"></div>
+                <p className="text-xs text-center mt-1">Mar</p>
+              </div>
 
+              <div className="mx-2 flex flex-col items-center">
+                <div className="bg-teal-600 bg-opacity-20 rounded-t-full w-6 h-10"></div>
+                <p className="text-xs text-center mt-1">Apr</p>
+              </div>
             </div>
           </div>
-          <hr/>
+          <hr />
+          <div className="flex flex-row justify-between mt-2">
+            <div>
+              <div>
+                <h4 className="text-2xl font-bold">$84,240.38</h4>
+                <p>Total Income</p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <h4 className="text-2xl font-bold">$84,240.38</h4>
+                <p>Total Expense</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className=" flex flex-row p-2 mt-4">
+          <div className="flex-1 border flex flex-col justify-between m-1 rounded-lg p-2">
+            <h4 className="font-bold">Task Summary</h4>
+            <div className="mt-4 flex flex-row ">
+              <div className="w-16 h-20 flex flex-col justify-between bg-orange-500 m-1 rounded p-1">
+                <h4 className="text-white">New</h4>
+                <p className="text-white font-roboto text-lg">3</p>
+              </div>
+              <div className="w-16 h-20 bg-blue-500 m-1 flex flex-col justify-between rounded p-1">
+                <h4 className="text-white">New</h4>
+                <p className="font-roboto text-white text-lg">16</p>
+              </div>
+              <div className="w-16 h-20 bg-cyan-500 m-1 flex flex-col justify-between rounded p-1">
+                <h4 className="text-white">New</h4>
+                <p className="text-white font-roboto text-lg">36</p>
+              </div>
+            </div>
+            <div>
+              <p className="text-sm font-medium">On-time Completion Rate</p>
+              <h4 className="text-2xl font-bold flex flex-row items-center">
+                98%
+                <span className="text-teal-600 text-xs ml-2 flex flex-row items-center">
+                  <img
+                    src="topRight.png"
+                    alt=""
+                    className="w-6 h-6"
+                    style={{
+                      filter:
+                        "invert(37%) sepia(72%) saturate(635%) hue-rotate(168deg)",
+                    }}
+                  />
+                  2.73%
+                </span>
+              </h4>
+            </div>
+          </div>
+          <div className="flex-1 border m-1 rounded-lg p-3">
+            <div className="flex flex-row items-center justify-between">
+              <h4 className="font-bold">Properties</h4>
+              <div className="flex flex-row items-center">
+                <p className="text-teal-500">All Properties</p>
+                <img
+                  src="right.png"
+                  alt=""
+                  className="w-6 h-6 relative"
+                  style={{
+                    filter:
+                      "invert(37%) sepia(72%) saturate(635%) hue-rotate(168deg)",
+                  }}
+                />
+              </div>
+            </div>
+            <div className="mt-2 flex flex-row justify-between">
+              <div className="">
+                <div className="flex items-center m-2">
+                  <div className="w-4 h-4 bg-blue-900"></div>
+                  <div className="ml-2">
+                    <h4 className="font-bold">298</h4>
+                    <p className="text-sm font-medium">Occupied 41%</p>
+                  </div>
+                </div>
+                <div className="flex items-center m-2">
+                  <div className="w-4 h-4 bg-cyan-600"></div>
+                  <div className="ml-2">
+                    <h4 className="font-bold">249</h4>
+                    <p className="text-sm font-medium">Vacant 27%</p>
+                  </div>
+                </div>
+                <div className="flex items-center m-2">
+                  <div className="w-4 h-4 bg-orange-500"></div>
+                  <div className="ml-2">
+                    <h4 className="font-bold">89</h4>
+                    <p className="text-sm font-medium">Maintenance 1.3%</p>
+                  </div>
+                </div>
+              </div>
+
+              <DonutChart />
+            </div>
+          </div>
         </div>
       </div>
       <div className="w-80">
         <div className=" flex flex-row justify-between border-b p-2">
-          <div></div>
+          <div className="flex flex-row items-center">
+            <div className="bg-orange-600 m-1 rounded-full flex items-center">
+            <img
+  src="storm.png"
+  alt=""
+  className="w-8 h-8 rounded-full"
+  style={{
+    filter: "invert(100%) brightness(100%)"
+  }}
+/>
+
+            </div>
+            <div className="bg-gray-200 relative m-1 rounded-full flex justify-center items-center w-8 h-8">
+            <div className="absolute -right-1 -top-1 bg-cyan-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
+              <p className="m-0">2</p>
+            </div>
+                <img src="notification.png" alt="" className="w-4 h-4 rounded-full"/>
+            </div>
+          </div>
           <div className="flex flex-row items-center">
             <div>
-              <h4 className="font-bold">Christabel Ama</h4>
-              <p className="text-end text-sm text-gray-400">Manager</p>
+              <h4 className="font-roboto">Christabel Ama</h4>
+              <p className="text-end text-sm text-gray-400 font-nunito">
+                Manager
+              </p>
             </div>
             <div>
               <img
                 src="userThree.jpg"
                 alt=""
-                className="w-8 h-8 rounded-full ml-1 "
+                className="w-8 h-8 rounded-full ml-1"
               />
             </div>
           </div>
@@ -121,7 +263,7 @@ const Home = () => {
               <div className="w-6 h-6 rounded-full p-1 bg-green-800 bg-opacity-10">
                 <p className="text-xs text-center">6</p>
               </div>
-              <h4 className="text-xs text-center">Sat</h4>
+              <h4 className="text-xs text-center ">Sat</h4>
             </div>
             <div>
               <div className="w-6 h-6 rounded-full p-1 bg-green-800 bg-opacity-10">
@@ -164,7 +306,15 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-blue-600 p-2 mt-10 h-10 w-52 rounded-lg"></div>
+            <div className="bg-blue-600 flex flex-row items-center p-2 mt-10 h-12 w-52 rounded-lg">
+            <div className="w-8 h-8 bg-white p-2 rounded-full">
+                <img src="report.png" alt="" className="" />
+              </div>
+              <div className="ml-2">
+                 <p className="text-white">Generate Report</p>
+                 <p className="text-xs text-white">Personal Task</p>
+              </div>
+            </div>
           </div>
         </div>
         <div className=" p-2">
@@ -198,9 +348,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            {/* Adjusted Separator Line */}
-            <div className="border-l h-10 mx-5"></div>{" "}
-            {/* Increased height to connect images */}
+            <div className="border-l h-10 mx-5"></div>
             <div className="flex flex-row m-1">
               <img
                 src="userOne.jpg"
