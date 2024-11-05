@@ -103,19 +103,30 @@ const Home = () => {
           <div className="flex-1 border flex flex-col justify-between m-1 rounded-lg p-2">
             <h4 className="font-bold">Task Summary</h4>
             <div className="mt-4 flex flex-row ">
-              <div className="w-16 h-20 flex flex-col justify-between bg-orange-500 m-1 rounded p-1">
+              <div className="w-16 h-20 flex flex-col justify-between bg-opacity-90 bg-orange-500 m-1 rounded p-1">
                 <h4 className="text-white">New</h4>
+                <div className="flex flex-row justify-between items-center">
                 <p className="text-white font-roboto text-lg">3</p>
+                <div>
+                <img src="flagTwo.png" alt="" className="w-4 h-4 filter brightness-0 invert" />
+
+
+                </div>
+                
+                </div>
+                
               </div>
-              <div className="w-16 h-20 bg-blue-500 m-1 flex flex-col justify-between rounded p-1">
-                <h4 className="text-white">New</h4>
+              <div className="w-auto h-20 bg-blue-500 m-1 flex flex-col justify-between rounded p-1">
+                <h4 className="text-white">Approved</h4>
                 <p className="font-roboto text-white text-lg">16</p>
               </div>
               <div className="w-16 h-20 bg-cyan-500 m-1 flex flex-col justify-between rounded p-1">
-                <h4 className="text-white">New</h4>
+                <h4 className="text-white">Closed</h4>
                 <p className="text-white font-roboto text-lg">36</p>
               </div>
             </div>
+     
+
             <div>
               <p className="text-sm font-medium">On-time Completion Rate</p>
               <h4 className="text-2xl font-bold flex flex-row items-center">
@@ -362,7 +373,7 @@ const Home = () => {
                 <h4 className="font-medium text-sm">
                   Water drip from faucets
                   <span className="text-gray-500 ml-1">completed task</span>
-                  <span className="text-gray-400 text-xs ml-2">#222</span>
+                  <span className="text-black text-xs ml-2">#222</span>
                 </h4>
                 <p className="text-gray-500 text-sm">Yesterday 9:48 PM</p>
               </div>
